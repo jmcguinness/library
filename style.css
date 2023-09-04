@@ -1,0 +1,135 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+.page-title{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    color: #e6007e;
+}
+
+.add-book{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: #e6007e;
+}
+
+.logo-img{
+    max-width: 5%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    border: 5px solid #e6007e;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    padding: 15px;
+    border: 5px #e6007e;
+}
+
+.modal{
+    display: flex;
+    background-color: white;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    max-width: 70%;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10 px;
+    align-items: center;
+    padding: 5px;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);   
+}
+
+.modal-header{
+    display: grid;
+    grid-column: auto;
+    width: 100%;
+    padding: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.modal-body{
+    width: 100%;
+    padding: 10px;
+}
+
+.modal-footer{
+    width: 100%;
+    padding: 10px;
+}
+
+.overlay{
+    position: fixed;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+.overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}  
+
+.title{
+    font: bold;
+    background-color: antiquewhite;
+    position: absolute;
+    justify-content: center;
+    border: 1px #e6007e;
+    border-radius: .25em;
+}
+
+.books{
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 200px;
+    padding: 100px;
+    align-items: center;
+}
+
+.book-1{
+    border: 1px solid gray;
+    Padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.input{
+    padding: 10px;
+    width: 100%;
+}
+
+.submit{
+    border-top: 1px #777;
+    align-items: center;
+}
+
+.closeBtn{
+    margin-right: 5rem;
+}
